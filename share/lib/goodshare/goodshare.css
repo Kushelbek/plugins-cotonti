@@ -1,0 +1,309 @@
+@font-face {
+    font-family: 'share';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: local('Share-Icons'),
+        url('../../fonts/share.woff') format('woff'),
+        url('../../fonts/share.woff2') format('woff2');
+}
+
+.goodshare [hidden] {
+    display: none !important
+}
+
+.goodshare {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.goodshare.start-- {
+    justify-content: flex-start;
+}
+
+.goodshare.center-- {
+    justify-content: center;
+}
+
+.goodshare.end-- {
+    justify-content: flex-end;
+}
+
+/* Buttons big */
+.goodshare.sh-big ins,
+.goodshare.sh-big label {
+    min-width: 32px;
+    height: 32px;
+    font: normal normal 1.1rem/32px share;
+}
+
+/* Buttons medium */
+.goodshare.sh-medi ins,
+.goodshare.sh-medi label {
+    min-width: 26px;
+    height: 26px;
+    font: normal normal .95rem/26px share;
+}
+
+/* Buttons small */
+.goodshare.sh-small ins,
+.goodshare.sh-small label {
+    min-width: 20px;
+    height: 20px;
+    font: normal lighter .8rem/20px share;
+}
+
+.goodshare .share-visible {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-right: 34px;
+    position: relative;
+}
+
+.goodshare.sh-medi .share-visible {
+    padding-right: 28px;
+}
+
+.goodshare.sh-small .share-visible {
+    padding-right: 22px;
+}
+
+.goodshare [data-social] {
+    font-family: share;
+    speak: none;
+    text-decoration: none;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 1px;
+    border-radius: 3px;
+    padding: 0 4px;
+    box-sizing: content-box;
+}
+
+.goodshare .share-hidden {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 34px;
+    max-width: 360px;
+    z-index: 999;
+}
+
+.goodshare :checked~.share-hidden {
+    display: block;
+}
+
+.goodshare ins,
+.goodshare label,
+.goodshare .share-hidden>div {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.goodshare ins,
+.goodshare label {
+    margin: 1px;
+    cursor: pointer;
+    line-height: normal;
+    text-decoration: none;
+    color: rgba(255, 255, 255, .95);
+    transition: All .4s ease-in-out;
+}
+
+.goodshare ins:hover,
+.goodshare label:hover {
+    opacity: .95;
+}
+
+.goodshare [data-social]:hover::after {
+    content: attr(data-social);
+    position: absolute;
+    top: -103%;
+    left: 0;
+    background: inherit;
+    height: inherit;
+    padding: 0 10px;
+    border-radius: 10px 10px 10px 0;
+    transition: All .4s ease-in-out;
+    opacity: 1;
+}
+
+.goodshare ins>[data-counter] {
+    font-size: .9em;
+    margin-left: 3px;
+    quotes: none;
+}
+
+.sh-medi .share-hidden {
+    top: 28px
+}
+
+.sh-small .share-hidden {
+    top: 22px
+}
+
+.goodshare .share-hidden>div {
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    padding: 20px 5px;
+    z-index: 999;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(2, 2, 2, .2), inset 0 0 50px rgba(185, 185, 185, .15);
+    align-content: flex-start;
+}
+
+/* Toggle button */
+.goodshare label {
+    background: #FF7450;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+}
+
+.goodshare label::before {
+    content: "+";
+    font-weight:800;
+}
+
+.goodshare :checked+label {
+    background: #FCA012;
+}
+.goodshare :checked+label::before {
+    content: "-";
+}
+
+/* Vkontakte */
+[data-social=vkontakte] {background: #45668e}
+[data-social=vkontakte]::before {content: '\e812'}
+
+/* Facebook */
+[data-social=facebook] {background: #3b5998}
+[data-social=facebook]::before {content: '\e815'}
+
+/* Odnoklassniki */
+[data-social=odnoklassniki] {background: #ed812b}
+[data-social=odnoklassniki]::before {content: '\e81a'}
+
+/* My.Mail.ru */
+[data-social=moimir] {background: #168de2}
+[data-social=moimir]::before {content: '\e800'}
+
+/* Twitter */
+[data-social=twitter] {background: #55acee}
+[data-social=twitter]::before {content: '\e813'}
+
+/* Livejournal */
+[data-social=livejournal] {background: #004359}
+[data-social=livejournal]::before {content: '\e802'}
+
+/* Liveinternet */
+[data-social=liveinternet] {background: #627683}
+[data-social=liveinternet]::before {content: '\e81b'}
+
+/* Linkedin */
+[data-social=linkedin] {background: #0976b4}
+[data-social=linkedin]::before {content: '\e808'}
+
+/* Tumblr */
+[data-social=tumblr] {background: #35465c}
+[data-social=tumblr]::before {content: '\e819'}
+
+/* Surfingbird */
+[data-social=surfingbird] {background: #26B1F6}
+[data-social=surfingbird]::before {content: '\e803'}
+
+/* Pinterest */
+[data-social=pinterest] {background: #cc2127}
+[data-social=pinterest]::before {content: '\e80c'}
+
+/* Reddit */
+[data-social=reddit] {background: #5f99cf}
+[data-social=reddit]::before {content: '\e80e'}
+
+/* Buffer */
+[data-social=buffer] {background: #323b43}
+[data-social=buffer]::before {content: '\e817'}
+
+/* Mix */
+[data-social=mix] {background: #dd4b39}
+[data-social=mix]::before {content: '\f34b'}
+
+/* Pocket */
+[data-social=pocket] {background: #d3505a}
+[data-social=pocket]::before {content: '\e818'}
+
+/* Xing */
+[data-social=xing] {background: #cfdc00}
+[data-social=xing]::before {content: '\e814'}
+
+/* Evernote */
+[data-social=evernote] {background: #7ac142}
+[data-social=evernote]::before {content: '\e810'}
+
+/* Delicious */
+[data-social=delicious] {background: #cfdc00}
+[data-social=delicious]::before {content: '\e80b'}
+
+/* Blogger */
+[data-social=blogger] {background: #f57d00}
+[data-social=blogger]::before {content: '\e80f'}
+
+/* Digg */
+[data-social=digg] {background: #000000}
+[data-social=digg]::before {content: '\e80d'}
+
+/* Instapaper */
+[data-social=instapaper] {background: #428bca}
+[data-social=instapaper]::before {content: '\e811'}
+
+/* Wordpress */
+[data-social=wordpress] {background: #0087be}
+[data-social=wordpress]::before {content: '\e816'}
+
+/* Baidu */
+[data-social=baidu] {background: #323b43}
+[data-social=baidu]::before {content: '\e81e'}
+
+/* Weibo */
+[data-social=weibo] {background: #c53220}
+[data-social=weibo]::before {content: '\e81c'}
+
+/* Renren */
+[data-social=renren] {background: #53a9d7}
+[data-social=renren]::before {content: '\e81d'}
+
+/* =====   Messengers   ===== */
+/* LINE */
+[data-social=line] {background: #00c300}
+[data-social=line]::before {content: '\e806'}
+
+/* Telegram */
+[data-social=telegram] {background: #0088cc}
+[data-social=telegram]::before {content: '\e807'}
+
+/* Viber */
+[data-social=viber] {background: #8f5db7}
+[data-social=viber]::before {content: '\e805'}
+
+/* WhatsApp */
+[data-social=whatsapp] {background: #43d854}
+[data-social=whatsapp]::before {content: '\e80a'}
+
+/* Skype */
+[data-social=skype] {background: #0899e7}
+[data-social=skype]::before {content: '\f17e'}
+
+/* SMS */
+[data-social=sms] {background: #3198be}
+[data-social=sms]::before {content: '\e804'}
+
+/* Wechat */
+[data-social=wechat] {background: #4c9a0f}
+[data-social=wechat]::before {content: '\f1d7'}

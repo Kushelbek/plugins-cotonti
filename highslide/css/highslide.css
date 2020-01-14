@@ -1,0 +1,428 @@
+.highslide-container table {
+	background: none;
+	table-layout: auto;
+}
+.highslide {
+	outline: none;
+	text-decoration: none;
+}
+.highslide img {
+	margin: 3px;
+	padding: 10px;
+	max-width: 100%;
+	border: 0;
+	background: #fff;
+	box-shadow: 0 1px 1px #787878, 0 0 1px #c7c7c7;
+	border-radius: 5px;
+	transition: All .3s ease-in-out;
+}
+.highslide img:hover {
+	filter:brightness(110%);
+	transform: scale(1.015);
+}
+
+.highslide-active-anchor img {
+	visibility: hidden;
+}
+.highslide-image {
+	border: 2px solid #fff;
+}
+.highslide-wrapper, .highslide-outline {
+	background:#fff;
+}
+.glossy-dark {
+	background: #111;
+}
+.highslide-number {
+	font-weight: bold;
+	color: gray;
+	font-size: .9em;
+}
+.highslide-caption {
+	display: none;
+	font-size: 1em;
+	padding: 5px;
+}
+.highslide-heading {
+	display: none;
+	font-weight: bold;
+	margin: .4em;
+}
+.highslide-dimming {
+	background: black;
+}
+.highslide-loading {
+	display: block;
+	color: black;
+	font-size: 9px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 3px;
+	border: 1px solid white;
+	padding-left: 22px;
+	background: #fff url(../lib/graphics/loader.white.gif) 3px 1px no-repeat;
+}
+a.highslide-credits,
+a.highslide-credits i {
+	padding: 2px;
+	color: silver;
+	text-decoration: none;
+	font-size: 10px;
+}
+a.highslide-credits:hover,
+a.highslide-credits:hover i {
+	color: white;
+	background-color: gray;
+}
+.highslide-move, .highslide-move * {
+	cursor: move;
+}
+
+.highslide-viewport {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: none;
+	left: 0;
+	top: 0;
+}
+.highslide-overlay {
+	display: none;
+}
+.hidden-container {
+	display: none;
+}
+
+/*  CONTROLS FOR THE GALLERIES
+============================================*/
+.highslide-controls {
+	width: 195px;
+	height: 40px;
+	background: url(../lib/graphics/controlbar-white.gif) 0 -90px no-repeat;
+	margin: 20px 15px 10px 0;
+}
+.highslide-controls ul {
+	position: relative;
+	left: 15px;
+	height: 40px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background: url(../lib/graphics/controlbar-white.gif) right -90px no-repeat;
+
+}
+.highslide-controls li {
+	float: left;
+	padding: 5px 0;
+	margin:0;
+	list-style: none;
+}
+.highslide-controls a {
+	background-image: url(../lib/graphics/controlbar-white.gif);
+	display: block;
+	float: left;
+	height: 30px;
+	width: 30px;
+	outline: none;
+}
+.highslide-controls a.disabled {
+	cursor: default;
+}
+.highslide-controls a.disabled span {
+	cursor: default;
+}
+.highslide-controls a span {
+	display: none;
+	cursor: pointer;
+}
+
+.highslide-controls .highslide-previous a {
+	background-position: 0 0;
+}
+.highslide-controls .highslide-previous a:hover {
+	background-position: 0 -30px;
+}
+.highslide-controls .highslide-previous a.disabled {
+	background-position: 0 -60px !important;
+}
+.highslide-controls .highslide-play a {
+	background-position: -30px 0;
+}
+.highslide-controls .highslide-play a:hover {
+	background-position: -30px -30px;
+}
+.highslide-controls .highslide-play a.disabled {
+	background-position: -30px -60px !important;
+}
+.highslide-controls .highslide-pause a {
+	background-position: -60px 0;
+}
+.highslide-controls .highslide-pause a:hover {
+	background-position: -60px -30px;
+}
+.highslide-controls .highslide-next a {
+	background-position: -90px 0;
+}
+.highslide-controls .highslide-next a:hover {
+	background-position: -90px -30px;
+}
+.highslide-controls .highslide-next a.disabled {
+	background-position: -90px -60px !important;
+}
+.highslide-controls .highslide-move a {
+	background-position: -120px 0;
+}
+.highslide-controls .highslide-move a:hover {
+	background-position: -120px -30px;
+}
+.highslide-controls .highslide-full-expand a {
+	background-position: -150px 0;
+}
+.highslide-controls .highslide-full-expand a:hover {
+	background-position: -150px -30px;
+}
+.highslide-controls .highslide-full-expand a.disabled {
+	background-position: -150px -60px !important;
+}
+.highslide-controls .highslide-close a {
+	background-position: -180px 0;
+}
+.highslide-controls .highslide-close a:hover {
+	background-position: -180px -30px;
+}
+
+/*  THUMBSTRIP
+============================================*/
+
+.highslide-thumbstrip {
+	height: 100%;
+	direction: ltr;
+}
+.highslide-thumbstrip div {
+	overflow: hidden;
+}
+.highslide-thumbstrip table {
+	position: relative;
+	padding: 0;
+	border-collapse: collapse;
+	width:auto;
+}
+.highslide-thumbstrip td {
+	padding: 1px;
+}
+.highslide-thumbstrip a {
+	outline: none;
+}
+.highslide-thumbstrip img {
+	display: block;
+	margin: 0 auto;
+	border: 2px solid gray;
+	border-radius: 3px;
+}
+.highslide-thumbstrip .highslide-active-anchor img {
+	visibility: visible;
+	border-color: #39b2ff;
+	opacity: 1;
+	box-shadow: 0 2px 2px #39b2ff;
+}
+.highslide-thumbstrip .highslide-marker {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-width: 0;
+	border-style: solid;
+	border-color: transparent;
+}
+.highslide-thumbstrip-horizontal div {
+	width: auto;
+}
+.highslide-thumbstrip-horizontal .highslide-scroll-up {
+	display: none;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 25px;
+	height: 52px;
+}
+.highslide-thumbstrip-horizontal .highslide-scroll-up div {
+	margin-bottom: 10px;
+	cursor: pointer;
+	background: url(../lib/graphics/scrollarrows.png) left center no-repeat;
+	height: 52px;
+}
+.highslide-thumbstrip-horizontal .highslide-scroll-down {
+	display: none;
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	width: 25px;
+	height: 52px;
+}
+.highslide-thumbstrip-horizontal .highslide-scroll-down div {
+	margin-bottom: 10px;
+	cursor: pointer;
+	background: url(../lib/graphics/scrollarrows.png) center right no-repeat;
+	height: 52px;
+}*/
+.highslide-thumbstrip-horizontal table {
+	margin: 2px 0 10px 0;
+}
+.highslide-viewport .highslide-thumbstrip-horizontal table {
+	margin-left: 10px;
+}
+.highslide-thumbstrip-horizontal img {
+	width: auto;
+	height: 50px;
+	margin-bottom: 14px;
+	opacity: .8;
+}
+.highslide-thumbstrip-horizontal .highslide-marker {
+	top: 59px;
+	border-left-width: 6px;
+	border-right-width: 6px;
+	border-bottom: 6px solid gray;
+}
+.highslide-viewport .highslide-thumbstrip-horizontal .highslide-marker {
+	margin-left: 10px;
+}
+
+/*  CUSTOM GALLERIES
+============================================*/
+.highslide-controls,
+.single-img .highslide-previous,
+.single-img .highslide-play,
+.single-img .highslide-next,
+.gallery-img .highslide-move
+ {
+    display: none;
+}
+
+.single-img .highslide-controls {
+    max-width: 110px;
+	display: block;
+}
+
+.gallery-img .highslide-controls {
+    max-width: 170px;
+	display: block;
+}
+
+.gallery-img .highslide-image {
+	cursor: pointer;
+}
+
+.single-img .highslide-image {
+	cursor: url(../lib/graphics/zoomout.cur), auto;
+}
+
+/*  MODAL
+============================================*/
+.highslide-modal  .highslide-header {
+	height: 18px;
+	border-bottom: 1px solid #dddddd;
+}
+.highslide-modal  .highslide-heading {
+	position: absolute;
+	margin: 2px 0.4em;
+}
+
+.highslide-modal  .highslide-header .highslide-move {
+	cursor: move;
+	display: block;
+	height: 18px;
+	position: absolute;
+	right: 24px;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+.highslide-modal .highslide-header .highslide-move * {
+	display: none;
+}
+.highslide-modal:hover .highslide-move * {
+	display: block;
+}
+.highslide-modal  .highslide-header .highslide-close {
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	z-index: 5;
+	padding: 0;
+}
+.highslide-modal  .highslide-header .highslide-close a {
+	display: block;
+	height: 16px;
+	width: 16px;
+	background-image: url(../lib/graphics/closeX.png);
+}
+.highslide-modal  .highslide-header .highslide-close a:hover {
+	background-position: 0 16px;
+}
+.highslide-modal  .highslide-header .highslide-close span {
+	display: none;
+}
+.highslide-modal  .highslide-maincontent {
+	padding-top: 1em;
+}
+.highslide-html {
+	background-color: #fff;
+}
+.mobile .highslide-html {
+	border: 1px solid silver;
+}
+.highslide-html-content {
+	display: none;
+	width: auto;
+	min-height: 80px;
+	padding: 0 5px 5px 5px;
+}
+
+.highslide-header {
+	padding-bottom: 5px;
+}
+.highslide-header ul {
+	margin: 0;
+	padding: 0;
+	text-align: right;
+}
+.highslide-header ul li {
+	display: inline;
+	padding-left: 1em;
+}
+.highslide-header ul li.highslide-previous, .highslide-header ul li.highslide-next {
+	display: none;
+}
+.highslide-header a {
+	font-weight: bold;
+	color: gray;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.highslide-header a:hover {
+	color: black;
+}
+.highslide-header .highslide-move a {
+	cursor: move;
+}
+.highslide-footer {
+	height: 16px;
+}
+.highslide-footer .highslide-resize {
+	display: block;
+	float: right;
+	margin-top: 5px;
+	height: 11px;
+	width: 11px;
+	background: url(../lib/graphics/resize.gif) no-repeat;
+}
+.highslide-footer .highslide-resize span {
+	display: none;
+}
+.highslide-body {
+}
+.highslide-resize {
+	cursor: nw-resize;
+}

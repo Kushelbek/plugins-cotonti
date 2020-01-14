@@ -1,0 +1,26 @@
+[data-att-gallery] {
+    background: #f1f1f1;
+}
+
+.highslide--gallery {
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.highslide--gallery a img {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.highslide-maincontent {
+    display: none;
+}
+
+@media (max-width:500px) {
+    .highslide--gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
