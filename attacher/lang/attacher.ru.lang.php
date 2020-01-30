@@ -6,7 +6,7 @@
  * @author Roffun
  * @copyright Copyright (c) Roffun, 2018 - 2019 | https://github.com/Roffun
  * @license BSD License
- **//
+ **/
 
 defined('COT_CODE') or die('Wrong URL');
 
