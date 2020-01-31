@@ -733,13 +733,13 @@ function att_get_all($area, $item, $field = '', $column = '')
         $sql = $db->query("SELECT * FROM $db_attacher
 			WHERE att_area = ? AND att_item = ? $whereFileld
 			ORDER BY 'att_order'", array($area, (int) $item));
-    }
 
-    while ($row = $sql->fetch()) {
-        $a_cache[$area][$item][] = (!empty($column) && in_array($column, $allowed_columns)) ? $row['att_' . $column] : $row;
-        $a_cache[$area][$item] = array_combine(range(1, count($a_cache[$area][$item])), array_values($a_cache[$area][$item]));
+        while ($row = $sql->fetch()) {
+            $a_cache[$area][$item][] = (!empty($column) && in_array($column, $allowed_columns)) ? $row['att_' . $column] : $row;
+            $a_cache[$area][$item] = array_combine(range(1, count($a_cache[$area][$item])), array_values($a_cache[$area][$item]));
+        }
+        $sql->closeCursor();
     }
-    $sql->closeCursor();
     return $a_cache[$area][$item];
 }
 
